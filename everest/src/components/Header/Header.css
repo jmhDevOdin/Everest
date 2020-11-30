@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     height: 64px;
-    color: white;
+    color: whitesmoke;
 }
 
 .header__logo {
@@ -52,7 +52,7 @@
 
 .header__menuItems {
     margin-left: 48px;
-    margin-right: 5px;
+    margin-right: 40px;
 }
 
 .header__menuItems > a {
