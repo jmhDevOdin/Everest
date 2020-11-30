@@ -12,7 +12,6 @@ function App() {
 
       </div>
       {/* <Body /> */}
-      <h1>Everest App</h1>
     </div>
   );
 }
