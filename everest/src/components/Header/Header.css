@@ -52,6 +52,7 @@
 
 .header__menuItems {
     margin-left: 48px;
+    margin-right: 5px;
 }
 
 .header__menuItems > a {
