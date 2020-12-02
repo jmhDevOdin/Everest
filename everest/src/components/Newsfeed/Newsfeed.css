@@ -11,26 +11,30 @@
   font-size: 12px;
 }
 
+.newsfeed__portfolio {
+    padding: 0px 0px 20px 5px;
+}
+
 .newsfeed__chart__section {
 }
 
 .newsfeed__buying__section {
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 20px 5px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #3b4754;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 
 .newsfeed__market__section {
   margin: 12px 0;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .newsfeed__market__box {
   height: 10vh;
-  padding: 20px;
+  padding: 20px 5px;
   border-radius: 4px;
   border: 1px solid #31363A;
 }
@@ -46,6 +50,7 @@
 .newsfeed__popularlists__section {
   height: fit-content;
   padding-bottom: 20px;
+  padding-left: 5px;
 }
 
 .newsfeed__popularlists__intro {
