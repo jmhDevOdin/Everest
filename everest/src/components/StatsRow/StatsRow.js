@@ -3,8 +3,8 @@ import StockChart from '../../stock.svg';
 import { db } from '../../firebase';
 
 function StatsRow(props) {
-  //   console.log(props, "what is in props here?");
-// (currentPrice - openPrice)/openPrice
+  // console.log(props, "what is in props here?");
+  //(currentPrice - openPrice)/openPrice
   const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
 
   const buyStock = () => {
@@ -16,10 +16,7 @@ function StatsRow(props) {
             // Update the record
             querySnapshot.forEach(function(doc) {
                 // doc.data() is never undefined for queries
-                db.collection('myStocks').doc(doc.id).update({
-                    shares: doc.data().shares += 1
-                })
-            });
+                db.collection('myStocks').doc(doc.id).update({shares: doc.data().shares += 1})});
         } else {
             db.collection('myStocks').add({
                 ticker: props.name,

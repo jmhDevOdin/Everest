@@ -11,9 +11,7 @@ function Article(props) {
    
     useEffect(() => {
         if (props) {
-            return axios
-              .get(BASE_URL)
-              .then((res) => {
+            return axios.get(BASE_URL).then((res) => {
                   console.log(res.data, 'res data');
                   let article = res.data[0];
                   setArticle(article);

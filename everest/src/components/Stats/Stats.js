@@ -8,8 +8,6 @@ import { db } from "../../firebase";
 
 const BASE_URL = "https://finnhub.io/api/v1/quote?symbol=";
 const KEY_URL = `&token=${key}`;
-
-
 const testData = []; 
 
 function Stats() {
@@ -23,8 +21,7 @@ function Stats() {
         let promises = [];
         let tempData = []
         snapshot.docs.map((doc) => {
-          promises.push(getStocksData(doc.data().ticker)
-          .then(res => {
+          promises.push(getStocksData(doc.data().ticker).then(res => {
             tempData.push({
               id: doc.id,
               data: doc.data(),
@@ -32,15 +29,12 @@ function Stats() {
             })
           })
         )})
-        Promise.all(promises).then(()=>{
-          setMyStocks(tempData);
-        })
+        Promise.all(promises).then(()=>{setMyStocks(tempData);})
     })
   }
 
   const getStocksData = (stock) => {
-    return axios
-      .get(`${BASE_URL}${stock}${KEY_URL}`)
+    return axios.get(`${BASE_URL}${stock}${KEY_URL}`)
       .catch((error) => {
         console.error("Error", error.message);
       });
@@ -53,8 +47,7 @@ function Stats() {
     let promises = [];
     stocksList.map((stock) => {
       promises.push(
-        getStocksData(stock)
-        .then((res) => {
+        getStocksData(stock).then((res) => {
           testData.push({
             name: stock,
             ...res.data
